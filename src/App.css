@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrar", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  background-color: #2b3467;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 40px;
+}
+.table-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px 40px;
+}
+.align-help-container {
+  width: 400px;
+  margin: 40px;
+}

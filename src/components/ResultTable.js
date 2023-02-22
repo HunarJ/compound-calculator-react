@@ -2,22 +2,20 @@ import "./ResultTable.css";
 import React, { Component } from "react";
 import ResultTableRow from "./ResultTableRow";
 
-let ResultTable = ({data}) => {
-
+let ResultTable = ({ data }) => {
   return (
     <div className="results-table-container" id="table-container">
-      <table>
+      <table id="results-table">
         <thead>
-          <th>Období</th>
-          <th>Hodnota portfolia</th>
+          <tr>
+            <th>Období</th>
+            <th>Hodnota portfolia</th>
+          </tr>
         </thead>
-        <tbody>
-
-          {
-            data.map(item => <ResultTableRow data = {item} />
-            )
-          }
-          
+        <tbody id="results-table-body">
+          {data.map((item) => (
+            <ResultTableRow data={item} />
+          ))}
         </tbody>
       </table>
     </div>

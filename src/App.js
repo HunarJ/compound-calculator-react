@@ -17,30 +17,47 @@ const App = () => {
     ratesState,
     investmentYearsState
   );
-
-  return (
-    <>
-      <section>
-        <CalculatorForm
-          initialAmount={initialAmountState}
-          setInitialAmountState={setInitialAmountState}
-          periodicalAmount={periodicalAmountState}
-          setPeriodicalAmountState={setPeriodicalAmountState}
-          rates={ratesState}
-          setRatesState={setRatesState}
-          investmentYears={investmentYearsState}
-          setInvestmentYearsState={setInvestmentYearsState}
-        ></CalculatorForm>
-      </section>
-
-      <section>
-        <ResultChart data={data}></ResultChart>
-      </section>
-      <section>
-        <ResultTable data={data}></ResultTable>
-      </section>
-    </>
-  );
+  if (data.length > 1) {
+    console.log("toto je děje");
+    return (
+      <>
+        <section className="container">
+          <CalculatorForm
+            initialAmount={initialAmountState}
+            setInitialAmountState={setInitialAmountState}
+            periodicalAmount={periodicalAmountState}
+            setPeriodicalAmountState={setPeriodicalAmountState}
+            rates={ratesState}
+            setRatesState={setRatesState}
+            investmentYears={investmentYearsState}
+            setInvestmentYearsState={setInvestmentYearsState}
+          ></CalculatorForm>
+          <ResultChart data={data}></ResultChart>
+        </section>
+        <section className="table-section">
+          <div className="align-help-container"></div>
+          <ResultTable data={data}></ResultTable>
+        </section>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <section>
+          <CalculatorForm
+            initialAmount={initialAmountState}
+            setInitialAmountState={setInitialAmountState}
+            periodicalAmount={periodicalAmountState}
+            setPeriodicalAmountState={setPeriodicalAmountState}
+            rates={ratesState}
+            setRatesState={setRatesState}
+            investmentYears={investmentYearsState}
+            setInvestmentYearsState={setInvestmentYearsState}
+          ></CalculatorForm>
+        </section>
+      </>
+    );
+  }
 };
 
 export default App;

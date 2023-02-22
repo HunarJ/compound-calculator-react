@@ -1,0 +1,17 @@
+.results {
+    box-shadow: 2px 2px 2px 2px grey;
+    background-color: #F1F6F5;
+    width: 800px;
+    height: 550px;
+    margin: 50px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.chart-area {
+    width: 80%;
+}

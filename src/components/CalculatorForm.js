@@ -6,39 +6,38 @@ import { useState } from "react";
 
 const CalculatorForm = (props) => {
   let { initialAmount, periodicalAmount, rates, investmentYears } = props;
-  
+
   return (
     <div className="calculator">
+      <div className="heading">
         <h3>Investiční kalkulačka</h3>
-        <small>Nárust vašich peněz v čase při složeném úrokování</small>
+      </div>
       <form className="compound-form">
         <NumberImput
+          className="input-group"
           onChange={props.setInitialAmountState}
           name="initialAmount"
-          label="Vstupní vklad"
+          label="Vstupní vklad:"
           value={props.initialAmountState}
         ></NumberImput>
         <NumberImput
           onChange={props.setPeriodicalAmountState}
           name="periodicalAmount"
-          label="Pravidelný měsíční vklad"
+          label="Pravidelný měsíční vklad:"
           value={props.periodicalAmountState}
         ></NumberImput>
         <NumberImput
           onChange={props.setRatesState}
           name="rates"
-          label="Roční úrok [%]"
+          label="Roční úrok [%]:"
           value={props.ratesState}
         ></NumberImput>
         <NumberImput
           onChange={props.setInvestmentYearsState}
           name="investmentYears"
-          label="Delka investování"
+          label="Delka investování [Roků]:"
           value={props.investmentYearsState}
         ></NumberImput>
-        <div className="button-section">
-          <input type="submit" value="Spočítej" className="calculate-button" />
-        </div>
       </form>
     </div>
   );

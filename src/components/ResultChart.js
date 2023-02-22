@@ -4,10 +4,10 @@ import { LineChart, Line, CartesianGrid, XAxis, YAxis } from "recharts";
 
 function ResultChart({ data }) {
   return (
-    <div className="results" id="chart-area">
-      <LineChart
-        width={730}
-        height={250}
+    <div className="results">
+      <LineChart className="chart-area"
+        width={700}
+        height={400}
         data={data}
         margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
       >

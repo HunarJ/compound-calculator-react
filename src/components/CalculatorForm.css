@@ -1,25 +1,25 @@
 .calculator {
-  width: 25%;
+  width: 400px;
   margin: 40px;
+  height: 550px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
   border-radius: 20px;
   box-shadow: 2px 2px 2px 2px grey;
+  color: black;
+  background-color: #f1f6f5;
 }
 
 .compound-form {
-  margin: 50px 20px;
-  padding: 20px;
-  width: 60%;
-  
+  margin: 10px 20px;
+  width: 90%;
   display: flex;
   flex-direction: column;
-  
 }
 .compound-form label {
-  margin: 10px 5px;
+  margin: 20px 5px;
   display: flex;
   flex-direction: column;
 }
@@ -31,4 +31,12 @@
 .calculate-button {
   margin: 10px 5px;
   width: 50%;
+}
+.heading h3 {
+  font-size: 25px;
+}
+.heading {
+  margin: 10px 20px;
+  display: flex;
+  flex-direction: column;
 }

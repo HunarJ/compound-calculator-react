@@ -22,7 +22,6 @@ export let calculate = (initial, periodical, rates, years) => {
     data.splice(-1);
   } catch (error) {}
 
-  console.log(data)
   const resultData = data.map((value, index) => {
     let y = {
       name: index + '. Rok',
@@ -31,7 +30,6 @@ export let calculate = (initial, periodical, rates, years) => {
     return y;
   });
 
-  console.log(resultData)
   return resultData
 
 };
@@ -40,4 +38,3 @@ let toDecimal = (value, decimals) => {
   return parseInt(value.toFixed(decimals));
 };
 
-let drawChart = () => {};

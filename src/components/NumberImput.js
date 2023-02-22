@@ -7,6 +7,7 @@ let NumberImput = (props) => {
     <label htmlFor={name}>
       {label}
       <input
+      className="input-group-field"
         onChange={event => {
           props.onChange(event.target.value)
         }}
